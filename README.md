@@ -1,32 +1,26 @@
-# BasePlugin
+# Q-SYS Event Log Exporter
 
-This is a template plugin that you can download with some pre-written Lua code to get you started.
+This is a very simple plugin that allows you to export your Core's Event Log to a .CSV file.
 
-## PluginCompile
+![deployed application](assets/screenshot.PNG)
 
-This is a submodule built for VS Code. Please note it is not intended to be used for any other source code editors.
+Click [here](https://qsc0-my.sharepoint.com/:f:/g/personal/maxx_sanner_qsc_com/EqLXnrwzZG1MmRnixxPLPvQBCriWMxxtNAJANus4nGf_Gw?e=qRSlX0) to download the plugin.
 
-The submodule will take the individual source Lua files in your local repo, compile them into a singular qplug file, and auto increment the desired octet of the BuildVersion.
-For first time builds, it will auto-generate an UUID for you plugin as well.
+## How to Use
 
-Make sure to map a keyboard shortcut by navigating to File>Preferences>Keyboard Shortcuts. Type in "Tasks" and assign the desired shortcut to the Tasks: Run Build Task command
+* Simply download the plugin and add it to your C:\Users\< user >\Documents\QSC\Q-Sys Designer\Plugins folder. 
+* Drag into your schematic from the plugins section of your Schematic Elements. 
+* Simply click the CSV button and this will save a myEvents.csv file to your Core's /designs/current_design directory. To access it, simply open a browser and navigate to https://< core IP >/designs/current_design. 
 
-### Build Arguments
+## How it Works
 
-<ver_maj> : increments the first octet of BuildVersion to denote a major version change
+This plugin uses the HttpClient library to pull timezone and event log data from your Core using a loopback IP. Timezone data is pulled to ensure the exported event log's event times match the event times in the Event Log in your Core. It then writes the data in a CSV format to a .csv file that is saved to the /designs/current_design directory of your Core using the io.write() method.
 
-<ver_min> : increments the second octet of BuildVersion to denote a minor version change
+## Badges 
+ ![languages badge](https://img.shields.io/github/languages/count/maxx105/QSYS_Event_Log_Exporter)
+ ![languages badge](https://img.shields.io/github/languages/top/maxx105/QSYS_Event_Log_Exporter)
 
-<ver_fix> : increments the third octet of BuildVersion to denote a bugfix
+## Questions 
+ For any questions, contact me at [maxxsanner105@gmail.com](mailto:maxxsanner105@gmail.com).
+#### [![Profile Pic](https://avatars.githubusercontent.com/u/63183869?)](https://github.com/maxx105)
 
-<ver_dev> : increments the fourth octet of BuildVersion to denote a new development version
-
-< CANCEL > : cancels the build process
-  
-Please note that the public version (PluginVersion) only displays first and second octet. The second octets are intended for developer use and version tracking.
-
-## Support
-
-If you have any questions or concerns with this template, please contact qsyscontrolfeedback@qsc.com
-
-Please note that QSC does not support plugins authored by third party developers or companies.
