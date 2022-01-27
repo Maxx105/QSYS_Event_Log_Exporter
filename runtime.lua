@@ -78,5 +78,6 @@ statusTimer.EventHandler = function()
   status.String = "CSV Created!"
 end
 
+status.String = ""
 getHTTPDateTime()
 
