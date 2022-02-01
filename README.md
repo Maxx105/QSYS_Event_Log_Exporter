@@ -8,7 +8,7 @@ Click [here](https://qsc0-my.sharepoint.com/:f:/g/personal/maxx_sanner_qsc_com/E
 
 ## How to Use
 
-* Simply download the plugin and add it to your C:\Users\< user >\Documents\QSC\Q-Sys Designer\Plugins folder. 
+* Simply download the plugin and add it to your C:\Users\user\Documents\QSC\Q-Sys Designer\Plugins folder. 
 * Drag into your schematic from the plugins section of your Schematic Elements. 
 * Simply click the CSV button and this will save a myEvents.csv file to your Core's /designs/current_design directory. To access it, simply open a browser and navigate to https://< core IP >/designs/current_design. 
 
